@@ -5,7 +5,7 @@ This file is used to list changes made in each version of the ganglia cookbook.
 
 0.1.0
 -----
-- [your_name] - Initial release of ganglia
+- [Andrew Raymer] - Initial release of ganglia
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.

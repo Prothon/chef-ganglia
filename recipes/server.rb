@@ -1,6 +1,7 @@
 #
 # Cookbook name: ganglia
 # Recipe:: server
+include_recipe 'chef-httpd::basic'
 
 node['ganglia']['server']['packages'].each do |gangliapkgs|
     package gangliapkgs
@@ -34,7 +35,7 @@ template "/etc/ganglia/gmond.conf " do
     notifies :restart, "service[gmond]", :immediately
 end
 
-template "/etc/httpd/conf.d/ganglia.conf " do
+template "/etc/httpd/conf.d/ganglia.conf" do
     source "ganglia.conf.erb"
     mode "0644"
     owner "root"
