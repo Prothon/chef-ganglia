@@ -7,10 +7,6 @@ node['ganglia']['server']['packages'].each do |gangliapkgs|
     package gangliapkgs
 end
 
-service "httpd" do
-    action [:start, :enable]
-end
-
 service "gmond" do
     action [:start, :enable]
 end
